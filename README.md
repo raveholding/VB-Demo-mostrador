@@ -2,7 +2,7 @@
 
 Demo para **almacenes, kioscos, autoservicios y comercios de barrio** que venden al consumidor final. Viene armada: no hay que configurar nada para probarla.
 
-**Demo en línea:** https://raveholding.github.io/VB-Demo-Mostrador/ · Usuario **ADMIN** · PIN **1234**
+**Demo en línea:** https://raveholding.github.io/VB-Demo-mostrador/ · Usuario **ADMIN** · PIN **1234**
 
 - Plan **VB Esencial**: vender (con lector y balanza), caja y cierres, stock, precios y etiquetas de góndola, clientes con libreta (cuenta corriente), Club de clientes y cupones.
 - Sin venta mayorista, sin reparto y sin lectura de facturas con IA (son de los planes superiores).
