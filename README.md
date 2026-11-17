@@ -5,7 +5,7 @@ Demo para **almacenes, kioscos, autoservicios y comercios de barrio** que venden
 **Demo en línea:** https://raveholding.github.io/VB-Demo-mostrador/ · Usuario **ADMIN** · PIN **1234**
 
 - Plan **VB Esencial**: vender (con lector y balanza), caja y cierres, stock, precios y etiquetas de góndola, clientes con libreta (cuenta corriente), Club de clientes y cupones.
-- No incluye (se contratan aparte o en planes superiores): NFC (tarjetas, lector y sello con el celular), portero y seguridad, asistente de texto y voz, toma de inventario con colectora.
+- Adicionales que se ven bloqueados, con «Pedir información» por WhatsApp: Combo NFC (tarjetas, lector y sello con el celular), asistente de voz e IA (plan Total) y portero y seguridad. Sin toma de inventario con colectora.
 - Sin venta mayorista, sin reparto y sin lectura de facturas con IA (son de los planes superiores).
 - Datos de ejemplo de un almacén: 47 productos en 7 categorías, artículos por kilo con PLU para la balanza, clientes con libreta, ventas de los últimos 10 días y de hoy, proveedores con deuda.
 - Ticket de 58/80 mm con los datos del comercio (de ejemplo) y la leyenda «Documento no válido como factura».
