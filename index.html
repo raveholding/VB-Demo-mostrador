@@ -12,7 +12,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <title>Mostrador Demo · Demo</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23242220'/%3E%3Ctext x='32' y='44' font-size='36' text-anchor='middle' fill='%23c9963e' font-family='Georgia,serif' font-weight='700'%3ER%3C/text%3E%3C/svg%3E">
-<script>window.RAVE_BUILD={"ver": "2026-11-17 04:04 UTC", "variant": "demo", "db": "vb-demo-vb-demo-mostrador-v2", "publicUrl": "https://raveholding.github.io/VB-Demo-mostrador/", "profile": "kini"};window.RAVE_CLOUD={"url": "", "key": "", "slug": ""};(function(){/* V27.6 · Cada demo guarda lo suyo: todas comparten raveholding.github.io y sin esto se mezclan datos entre demos (y con un sistema real abierto en el mismo navegador). */var B=window.RAVE_BUILD;if(!B||B.variant!=='demo'||window.__vbNS)return;var ns=window.__vbNS=B.db+'|';try{var S=Storage.prototype,g=S.getItem,s=S.setItem,r=S.removeItem,P=function(st,x){x=String(x);return st===window.localStorage&&x.indexOf(ns)!==0?ns+x:x};S.getItem=function(x){return g.call(this,P(this,x))};S.setItem=function(x,v){return s.call(this,P(this,x),v)};S.removeItem=function(x){return r.call(this,P(this,x))};}catch(e){}try{var I=window.indexedDB,o=I.open.bind(I),d=I.deleteDatabase.bind(I),N=function(n){n=String(n);return n===B.db||n.indexOf(ns)===0?n:ns+n};I.open=function(n,v){return v===undefined?o(N(n)):o(N(n),v)};I.deleteDatabase=function(n){return d(N(n))};}catch(e){}try{var BC=window.BroadcastChannel;if(BC){var W=function(n){return new BC(ns+n)};W.prototype=BC.prototype;window.BroadcastChannel=W;}}catch(e){}})();(function(){/* V27.6 · Reiniciar demo: borra SÓLO lo de esta demo (sus datos del navegador, su base y la de tarjetas) y recarga con los ejemplos frescos, fechados hoy. */
+<script>window.RAVE_BUILD={"ver": "2026-11-17 16:08 UTC", "variant": "demo", "db": "vb-demo-vb-demo-mostrador-v2", "publicUrl": "https://raveholding.github.io/VB-Demo-mostrador/", "profile": "kini"};window.RAVE_CLOUD={"url": "", "key": "", "slug": ""};(function(){/* V27.6 · Cada demo guarda lo suyo: todas comparten raveholding.github.io y sin esto se mezclan datos entre demos (y con un sistema real abierto en el mismo navegador). */var B=window.RAVE_BUILD;if(!B||B.variant!=='demo'||window.__vbNS)return;var ns=window.__vbNS=B.db+'|';try{var S=Storage.prototype,g=S.getItem,s=S.setItem,r=S.removeItem,P=function(st,x){x=String(x);return st===window.localStorage&&x.indexOf(ns)!==0?ns+x:x};S.getItem=function(x){return g.call(this,P(this,x))};S.setItem=function(x,v){return s.call(this,P(this,x),v)};S.removeItem=function(x){return r.call(this,P(this,x))};}catch(e){}try{var I=window.indexedDB,o=I.open.bind(I),d=I.deleteDatabase.bind(I),N=function(n){n=String(n);return n===B.db||n.indexOf(ns)===0?n:ns+n};I.open=function(n,v){return v===undefined?o(N(n)):o(N(n),v)};I.deleteDatabase=function(n){return d(N(n))};}catch(e){}try{var BC=window.BroadcastChannel;if(BC){var W=function(n){return new BC(ns+n)};W.prototype=BC.prototype;window.BroadcastChannel=W;}}catch(e){}})();(function(){/* V27.6 · Reiniciar demo: borra SÓLO lo de esta demo (sus datos del navegador, su base y la de tarjetas) y recarga con los ejemplos frescos, fechados hoy. */
 var B=window.RAVE_BUILD;if(!B||B.variant!=='demo'||window.vbDemoReset)return;var ns=B.db+'|';
 window.vbDemoReset=function(sinPreguntar){
  var go=function(){try{var ks=[];for(var i=0;i<localStorage.length;i++){var k=localStorage.key(i);if(k&&k.indexOf(ns)===0)ks.push(k);}ks.forEach(function(k){localStorage.removeItem(k);});}catch(e){}
@@ -27,7 +27,7 @@ var poner=function(){if(!document.getElementById('vb-rst-css')){var st=document.
  var side=document.getElementById('side');if(side&&!side.querySelector('.vb-rst')){var b=document.createElement('button');b.type='button';b.className='vb-rst';b.textContent='↺ Reiniciar demo';b.onclick=function(){window.vbDemoReset();};side.appendChild(b);}
  var box=document.querySelector('#login .lbox')||((document.getElementById('lp')||document.getElementById('pin')||{}).parentElement);if(box&&box.nodeType===1&&!box.querySelector('.vb-rst-login')){var w=document.createElement('div');w.className='vb-rst-login';w.innerHTML='<button type="button" class="vb-rst">↺ Reiniciar demo (dejarla como nueva)</button>';w.firstChild.onclick=function(){window.vbDemoReset();};var ref=[].slice.call(box.querySelectorAll('p')).find(function(p){return /Olvidaste/.test(p.textContent);});if(ref)ref.parentElement.insertBefore(w,ref.nextSibling);else box.appendChild(w);}};
 var mo=new MutationObserver(function(){poner();});var arr=function(){poner();mo.observe(document.body,{childList:true,subtree:true});};
-if(document.body)arr();else document.addEventListener('DOMContentLoaded',arr);})();window.RAVE_DEMO={"nombre": "Mostrador Demo", "slogan": "Almacén, kiosco y autoservicio · demo de Vincular Business", "canal": "min", "mods": ["pos_hold", "price_hist", "price_bulk", "labels", "kiosk"], "plan": "esencial", "pantallas": [], "catalogo": "almacen", "fijo": true};</script>
+if(document.body)arr();else document.addEventListener('DOMContentLoaded',arr);})();window.RAVE_DEMO={"nombre": "Mostrador Demo", "slogan": "Almacén, kiosco y autoservicio · demo de Vincular Business", "canal": "min", "mods": ["pos_hold", "price_hist", "price_bulk", "labels", "kiosk"], "plan": "esencial", "pantallas": [], "catalogo": "almacen", "fijo": true, "cli": false};</script>
 <style>
 :root{--ink:#0b0b0c;--gold:#3fbf6f;--gold2:#2e9e57;--bg:#f6f3ee;--card:#fff;--line:#e6e0d6;--mut:#6d675f;--red:#c0392b;--redbg:#fdecea;--ok:#1e7a46;--okbg:#e6f4ec;--warnbg:#fff4dc;--r:16px}
 *{box-sizing:border-box}
@@ -996,7 +996,7 @@ function rolesMigrate(r){if(!r)return r;if(Array.isArray(r.admin))for(const p of
  for(const perm of['purchases','price_lists','credit_ov','audit_read','pay_detail_edit']){const any=Object.values(r).some(a=>Array.isArray(a)&&a.includes(perm));if(!any){if(Array.isArray(r.supervisor))r.supervisor.push(perm);if(Array.isArray(r.admin))r.admin.push(perm);}}return r;}
 function mergeDefaults(st){const d=DEF();for(const k of Object.keys(d)){if(st[k]===undefined)st[k]=d[k];}rolesMigrate(st.roles);if(st.cfg&&!st.cfg.rep69&&st.roles){['supervisor','mostrador'].forEach(k=>{const L=st.roles[k];if(Array.isArray(L))['reparto','reparto_rend'].forEach(p=>{if(!L.includes(p))L.push(p);});});st.cfg.rep69=1;} /* V26.69: una sola vez; después decide el dueño */if(st.cfg&&st.cfg.permNotice===undefined)st.cfg.permNotice={ack:false};if(!IS_CLIENT&&st.cfg&&st.cfg.wholesale===undefined)wsDemoSeed(st);wsMigrate(st);bizMigrate(st);if(!IS_CLIENT&&typeof comboDemoSeed==='function')comboDemoSeed(st);if(!IS_CLIENT&&typeof hrDemoSeed==='function')hrDemoSeed(st);if(!IS_CLIENT&&typeof repDemoSeed==='function')repDemoSeed(st);if(!IS_CLIENT&&typeof finDemoSeed==='function'&&st.cfg&&!st.cfg.fin)finDemoSeed(st);if(!IS_CLIENT&&typeof pushDemoSeed==='function'&&st.cfg&&!st.cfg.push)pushDemoSeed(st);return st;}
 /* V26.14: el viejo «perfil sin rubros» de traspasos pasa a ser el tipo de negocio; el dueño (administrador) mueve fondos con su propia autorización */
-function bizMigrate(st){if(!st.cfg)return;if(typeof isSoloBuild==='function'&&isSoloBuild()){st.cfg.biz='owner';st.cfg.bizLocked=1;}if(typeof isKiniBuild==='function'&&isKiniBuild()){st.cfg.biz='owner';st.cfg.bizLocked=1;if(!st.cfg.kiniOnlyV&&st.cfg.wholesale){st.cfg.wholesale.only=true;(st.customers||[]).forEach(c=>{c.channel='mayorista';});st.cfg.kiniOnlyV=1;}}if(!st.cfg.biz)st.cfg.biz=(st.cfg.xfer&&st.cfg.xfer.noRubro)?'owner':'rubros';
+function bizMigrate(st){if(!st.cfg)return;if(typeof isSoloBuild==='function'&&isSoloBuild()){st.cfg.biz='owner';st.cfg.bizLocked=1;}if(typeof isKiniBuild==='function'&&isKiniBuild()){st.cfg.biz='owner';st.cfg.bizLocked=1;if(!st.cfg.kiniOnlyV&&st.cfg.wholesale){st.cfg.wholesale.only=true;(st.customers||[]).forEach(c=>{c.channel='mayorista';});st.cfg.kiniOnlyV=1;}const D0=typeof window!=='undefined'&&window.RAVE_DEMO;if(D0&&D0.fijo&&D0.canal==='may'&&D0.cli&&st.cfg.wholesale&&!st.cfg.wholesale.cli){st.cfg.wholesale.on=true;st.cfg.wholesale.only=true;st.cfg.wholesale.cli=true;} /* V27.9: la demo Mayorista vende sólo a comercios, también con datos ya guardados */}if(!st.cfg.biz)st.cfg.biz=(st.cfg.xfer&&st.cfg.xfer.noRubro)?'owner':'rubros';
  st.cfg.xfer=st.cfg.xfer||{};if(!st.cfg.xfer.ownerV){st.cfg.xfer.selfAuth=true;st.cfg.xfer.ownerV=1;}}
 
 /* ---------- Permisos, auditoría ---------- */
@@ -3751,6 +3751,7 @@ function kiniBase(d){
  if(D){d.tenant=Object.assign({},d.tenant,{name:D.nombre,legal:D.nombre,slogan:D.slogan,cuit:D.canal==='min'?'27-31245678-3':'30-71654321-4',iva:D.canal==='min'?'Responsable Monotributo (ejemplo)':'IVA Responsable Inscripto (ejemplo)',address:'Av. San Martín 1250, Salta (ejemplo)',phone:'(0387) 400-1250'});
   d.menu=Object.assign({},d.menu,{title:D.nombre.toUpperCase(),sub:{es:D.slogan,en:D.slogan},footer:{es:D.nombre+' · demo de Vincular Business',en:D.nombre+' · Vincular Business demo'}});
   if(d.cfg.wholesale&&D.canal==='both')d.cfg.wholesale.only=false;
+  if(d.cfg.wholesale&&D.canal==='may'&&D.cli)d.cfg.wholesale.cli=true; /* V27.9 · demo Mayorista: sólo comercios con CUIT */
   d.cfg.plan=D.plan||'total';d.cfg.mods=Object.assign({},d.cfg.mods||{});(D.mods||[]).forEach(k=>{d.cfg.mods[k]=true;});if(D.catalogo==='almacen')almBase(d);}
  const t=Math.max(Date.now()-2*3600000,new Date().setHours(0,5,0,0));
  d.sessions=[{id:'k-s1',caja:1,regId:'r1',regName:'Caja 1',branchId:'',openedBy:'ADMIN',openedAt:t,opening:15000000,closedAt:0},
@@ -3760,7 +3761,7 @@ function kiniBase(d){
 /* historial de ejemplo de la distribuidora (reemplaza al del almacén): ventas minoristas y mayoristas por presentación,
    algunas a cuenta corriente de los comercios. Marcadas «demo»: no tocan stock ni caja. */
 function kiniExtras(){if(!isKiniBuild())return;
- S.customers=(window.RAVE_DEMO&&window.RAVE_DEMO.catalogo==='almacen')?almCustomers():kiniCustomers();S.loyalty.ledger=[];S.members=[];S.plans=[];
+ S.customers=(window.RAVE_DEMO&&window.RAVE_DEMO.catalogo==='almacen')?almCustomers():kiniCustomers();if(S.cfg.wholesale&&S.cfg.wholesale.cli)S.customers=S.customers.filter(c=>c.taxid);S.loyalty.ledger=[];S.members=[];S.plans=[];
  S.coupons.forEach(c=>{c.uses=[];});
  S.sales=S.sales.filter(s=>!(s.demo&&/^hs/.test(s.id)));
  let seed=11;const rnd=()=>{seed=(seed*1103515245+12345)&0x7fffffff;return seed/0x7fffffff;};
@@ -3775,13 +3776,57 @@ function kiniExtras(){if(!isKiniBuild())return;
    else items.push({pid:p.id,name:p.name+(p.sub?' ('+p.sub+')':''),rubro:p.rubro,qty:1+Math.floor(rnd()*3),price:p.price,cost:p.cost,list:p.price,disc:0,...(ws?{lr:'L1',ll:'',lb:p.price}:{})});}
   if(!items.length)continue;
   const total=items.reduce((a,i)=>a+Math.round(i.qty*i.price),0);S.seq[cj]=(S.seq[cj]||0)+1;const ts=Date.now()-d*86400000-Math.floor(rnd()*8*3600000)-3*3600000;
-  const lib=S.customers.filter(c=>c.limit>0&&c.channel!=='mayorista');const cu=ws&&!(S.cfg.wholesale&&S.cfg.wholesale.only&&rnd()<0.3)?mays[Math.floor(rnd()*mays.length)]:(!ws&&lib.length&&rnd()<0.18?lib[Math.floor(rnd()*lib.length)]:null);let m=cu?metM[Math.floor(rnd()*metM.length)]:metm[Math.floor(rnd()*metm.length)];
+  const lib=S.customers.filter(c=>c.limit>0&&c.channel!=='mayorista');const cu=ws&&(S.cfg.wholesale&&S.cfg.wholesale.cli||!(S.cfg.wholesale&&S.cfg.wholesale.only&&rnd()<0.3))?mays[Math.floor(rnd()*mays.length)]:(!ws&&lib.length&&rnd()<0.18?lib[Math.floor(rnd()*lib.length)]:null);let m=cu?metM[Math.floor(rnd()*metM.length)]:metm[Math.floor(rnd()*metm.length)];
   if(m==='fiado'&&(!cu||d<2||(cu.term>0&&d>=cu.term)||((dbt[cu.id]||0)+total)>cu.limit*0.35))m='transferencia';const fi=m==='fiado'?total:0;if(fi)dbt[cu.id]=(dbt[cu.id]||0)+fi;
   const s={id:'hs'+d+'_'+k,n:cj+'-'+S.seq[cj],ts,user:ws?'ADMIN':'Mostrador',caja:cj,sessId:'hist-demo',items,total,method:m,doc:'ticket_interno',status:'ok',fee:0,channel:'local',
    cust:cu?cu.id:'',custName:cu?custFull(cu):'',coupon:'',benefit:null,recv:0,fiado:fi>0,pays:[{m,a:total,fee:0}],fiadoAmt:fi,paid:total-fi,balance:fi,vuelto:0,pstate:fi?'pendiente':'pagada',demo:true};
   if(ws)s.wch='mayorista';if(fi&&cu&&cu.term>0){s.term=cu.term;s.due=ts+cu.term*86400000;}
   S.sales.push(s);}}}
 /* proveedores, deudas y una orden pendiente: se cargan con el mismo motor que usa la pantalla (validaciones reales) */
+/* V27.10 · Distribuidora de ejemplo: cartera de comercios con zona y días de visita, preventista, pedidos de venta en distintos estados
+   (pendiente, armado, entregado en parte, entregado), visitas y cobranza en la calle de HOY, reparto con zonas, repartidores, envíos y una
+   hoja de ruta, y un acopio. Usa las mismas funciones que el sistema, así todo queda enlazado (stock reservado, remitos, cuenta corriente). */
+function demoDistriSeed(){if(!window.RAVE_DEMO||!giOn('orders')||S.cfg.distriSeeded)return;S.cfg.distriSeeded=1;
+ const t0=now(),H=3600000,DAY=86400000,adm=S.users.find(u=>u.role==='admin')||user;const prevU=user;user=adm;
+ try{
+  if(!S.roles.preventista)S.roles.preventista=['presale','orders','sell','customers'];
+  if(!S.users.some(u=>u.role==='preventista'))S.users.push({id:'u-prev',name:'Lucas (preventista)',role:'preventista',pin:'5555',active:true});
+  const Z=['Centro','Zona Norte','Zona Sur'],LL=[[-24.7883,-65.4106],[-24.7701,-65.4093],[-24.8052,-65.4201]],DIAS=[[1,4],[2,5],[3,6]];
+  const N=[['Despensa San Cayetano','27301112225','Av. Belgrano 1450',0,1500000,15],['Kiosco La Terminal','20334445551','Av. Hipólito Yrigoyen 200',0,800000,7],['Autoservicio El Tunal','30715556665','Av. Bolivia 4100',1,4000000,30],
+   ['Almacén Los Pinos','27389990006','Pasaje Los Pinos 120',1,1000000,15],['Minimercado Tres Cerritos','30716667770','Los Ceibos 55',1,2500000,30],['Despensa Don Julio','20298887771','Av. Tavella 3300',2,1200000,15],
+   ['Kiosco Universitario','27412223336','Av. Bolivia 5150',2,600000,7],['Bar El Patio','30717778886','Caseros 980',0,900000,15]];
+  N.forEach(([n,cuit,dir,z,lim,term],i)=>{if(!arcaCuitOk(cuit)||S.customers.some(c=>c.taxid===cuit))return;
+   S.customers.push({id:'dc'+i,num:100+i,name:n,last:'',birth:'',wa:'+5493874'+String(600000+i*137),dni:'',cards:[],cardSecrets:{},origin:'ejemplo',consent:{club:false,comm:true,analytics:false,version:'v1-2026-demo',ts:t0-40*DAY},ts:t0-40*DAY,
+    status:'activo',limit:lim*100,secret:'dc-ej-'+i+'-0000000000',notes:'',channel:'mayorista',taxid:cuit,term,zone:Z[z],seller:'u-prev',addr:dir+', Salta',example:true,
+    pv:{zona:Z[z],dias:DIAS[i%3],seller:'u-prev',ord:i,lat:LL[z][0]+((i*37)%9-4)*0.002,lng:LL[z][1]+((i*53)%9-4)*0.002}});});
+  S.customers.filter(c=>c.channel==='mayorista'&&!c.pv).forEach((c,i)=>{c.pv={zona:'Centro',dias:DIAS[i%3],seller:'u-prev',ord:20+i,lat:LL[0][0]+i*0.003,lng:LL[0][1]-i*0.003};c.zone=c.zone||'Centro';});
+  const P=S.products.filter(p=>!p.archived&&p.active!==false&&p.price>0&&!isKit(p)),pid=k=>P[(k*7)%P.length].id;
+  const ord=(cid,items,cond,src,note,hAtras)=>{const r=vbOrderCreate({cust:cid,items,cond,src,note,deliv:new Date(t0+DAY).toISOString().slice(0,10)});if(!r||r.err)return null;r.o.ts=t0-hAtras*H;if(r.o.hist[0])r.o.hist[0].ts=r.o.ts;return r.o;};
+  const o1=ord('dc0',[{pid:pid(1),qty:12},{pid:pid(2),qty:6}],'cc','preventa','Entregar a la mañana',2);
+  const o2=ord('dc2',[{pid:pid(3),qty:24},{pid:pid(4),qty:12},{pid:pid(5),qty:6}],'cc','preventa','',20);
+  const o3=ord('dc4',[{pid:pid(6),qty:18},{pid:pid(7),qty:6}],'contado','whatsapp','Pidió por WhatsApp',28);
+  const o4=ord('dc5',[{pid:pid(8),qty:12}],'cc','mostrador','',50);ord('dc1',[{pid:pid(9),qty:6},{pid:pid(10),qty:6}],'contado','preventa','',1);
+  if(o2){const k={};o2.items.forEach(it=>k[it.pid]=it.qty);vbPick(o2.id,k);}
+  if(o3){const k={};o3.items.forEach(it=>k[it.pid]=it.qty);vbRemito(o3.id,k);}
+  if(o4){const k={};o4.items.forEach(it=>k[it.pid]=Math.floor(it.qty/2));vbRemito(o4.id,k);}
+  user=S.users.find(u=>u.id==='u-prev')||adm;
+  const ruta=pvRoute('',new Date(t0).getDay());ruta.slice(0,3).forEach((c,i)=>pvVisit(c.id,['Compró','Tiene stock','Cerrado'][i],['Pedido cargado','Vuelve en la próxima visita',''][i]));
+  S.customers.filter(c=>debtOf(c.id)>200000).slice(0,2).forEach((c,i)=>pvCobro(c.id,Math.min(debtOf(c.id),[5000000,3000000][i]),i?'transferencia':'efectivo',i?'TRF 4512':''));
+  user=adm;
+  if(typeof repCfg==='function'){const rc=repCfg();rc.on=true;rc.origen={lat:-24.7859,lng:-65.4117,dir:'Depósito · Av. Ex Combatientes de Malvinas 3900, Salta (ejemplo)'};
+   rc.zonas=[{id:'rz1',nombre:'Centro',tarifa:0,minimo:0,eta:'2 a 4 h',radio:3,activo:true},{id:'rz2',nombre:'Zona Norte',tarifa:0,minimo:0,eta:'en el día',radio:6,activo:true},{id:'rz3',nombre:'Zona Sur',tarifa:0,minimo:0,eta:'en el día',radio:6,activo:true}];
+   rc.reps=[{id:'rr1',nombre:'Martín (camioneta)',tel:'3874001001',veh:'Camioneta',cap:12,fijo:0,pct:0,login:'',activo:true},{id:'rr2',nombre:'Diego (moto)',tel:'3874001002',veh:'Moto con baúl',cap:6,fijo:0,pct:0,login:'',activo:true}];
+   const env=[];['dc0','dc2','dc3','dc5','dc6','dc4'].forEach((cid,i)=>{const c=custById(cid);if(!c||!c.pv)return;const zi=Math.max(0,Z.indexOf(c.pv.zona));
+    const items=[0,1,2].slice(0,1+i%3).map(k=>{const p=prod(pid(i*3+k));const q=6*(1+(i+k)%3);return{pid:p.id,name:pfull(p),rubro:p.rubro,qty:q,price:p.price,cost:p.cost||0,unit:p.unit||'u'};});
+    const e=repNuevo({orig:i%2?'pos':'menu',cli:{nombre:c.name,tel:c.wa,dir:c.addr,loc:'Salta',ref:'',lat:c.pv.lat,lng:c.pv.lng,custId:c.id},zona:['rz1','rz2','rz3'][zi],tarifa:0,items,total:items.reduce((a,x)=>a+x.price*x.qty,0),cobro:{modo:i%2?'pagado':'cobrar',abona:0},nota:''});
+    e.ts=t0-(6-i)*H;env.push(e);});
+   if(env.length>=6){repSetEst(env[0],'preparando');['listo'].forEach(s=>{repSetEst(env[1],s);repSetEst(env[2],s);repSetEst(env[3],s);});repSetEst(env[5],'entregado');
+    const ids=[env[1].id,env[2].id];const r={id:uid(),n:repRutaNum(),ts:t0,rep:'rr1',repNom:'Martín (camioneta)',envios:ids,estado:'armada',cambio:0,km:repKm(ids),via:'cálculo propio (gratis)',url:repMapsUrl(ids),user:adm.name};
+    S.rutas.push(r);ids.forEach(id=>{const e=repEnv(id);e.rutaId=r.id;repHist(e,'en ruta '+r.n);});}}
+  if(giOn('stockpile'))vbAcopioCreate({cust:'dc2',items:[{pid:pid(11),qty:60}],note:'Mercadería pagada que retira en partes (ejemplo)'});
+  audit('DEMO_EJEMPLOS','Distribuidora: cartera, pedidos, preventa, reparto y acopio de ejemplo');
+ }catch(e){console.warn('demoDistriSeed',e&&e.message);}
+ user=prevU;save();}
 async function kiniSeedAsync(){if(!isKiniBuild()||!S.cfg||S.cfg.kiniSeeded)return;S.cfg.kiniSeeded=1;
  const prev=user;user=user||{id:'u1',name:'ADMIN',role:'admin'};
  const prods=S.products.filter(p=>p.unit==='u'&&!isKit(p)&&!p.archived&&p.price>0);const pick=(i)=>prods[i%prods.length];
@@ -3801,7 +3846,7 @@ async function kiniSeedAsync(){if(!isKiniBuild()||!S.cfg||S.cfg.kiniSeeded)retur
   if(ids[0])await LOCAL.ocSave({idempotency_key:'kini-ej-oc-1',proveedor_id:ids[0],estado:'Solicitada',observaciones:'Orden de ejemplo pendiente de recibir',
    items:['k-cer-lata','k-cer-negra'].map(id=>prod(id)||pick(2)).map(p=>({producto_id:p.id,cantidad:240,precio_costo_pactado:cost(p)}))});
  }catch(e){console.warn('kiniSeed',e&&e.message);}
- user=prev;audit('DEMO_EJEMPLOS','Kini: proveedores, deudas y orden de ejemplo');save();}
+ user=prev;audit('DEMO_EJEMPLOS','Kini: proveedores, deudas y orden de ejemplo');save();try{demoDistriSeed();}catch(e){console.warn('distri',e&&e.message);}}
 /* «Borrar todo y empezar vacío»: sin productos, clientes, proveedores, ventas ni cajas abiertas. Quedan los usuarios, las cajas definidas y la configuración */
 function emptyState(){const d=DEF();
  d.products=[];d.customers=[];d.sales=[];d.sessions=[];d.movs=[];d.closures=[];d.seq={};d.suppliers=[];d.pOrders=[];d.receipts=[];d.supLedger=[];
@@ -5110,7 +5155,7 @@ const WS_DAY=86400000;
 const WS_LV0=[{id:'d',name:'Display'},{id:'f',name:'Fardo'},{id:'p',name:'Pallet'}];
 function wsConf(){const w=(S.cfg&&S.cfg.wholesale)||{};
  const lv=(Array.isArray(w.levels)?w.levels:WS_LV0).filter(x=>x&&x.id&&x.name).slice(0,7).map(x=>({id:String(x.id).replace(/[^a-z0-9_]/gi,'').slice(0,12),name:String(x.name).replace(/[<>]/g,'').slice(0,24)}));
- return{on:!!w.on,only:!!(w.on&&w.only),allowClub:!!w.allowClub,grace:Math.max(0,Math.min(60,Math.round(+w.grace||0))),example:!!w.example,levels:lv};}
+ return{on:!!w.on,only:!!(w.on&&w.only),cli:!!(w.on&&w.only&&w.cli),allowClub:!!w.allowClub,grace:Math.max(0,Math.min(60,Math.round(+w.grace||0))),example:!!w.example,levels:lv};}
 const wsOn=()=>wsConf().on;
 const wsDateOk=(f,t)=>{const k=dkey(now());return(!f||k>=f)&&(!t||k<=t);};
 function wsLvName(id){if(id==='u')return'Unidad';const l=wsConf().levels.find(x=>x.id===id);return l?l.name:String(id);}
@@ -5120,7 +5165,8 @@ const wsOnly=()=>wsConf().only;
 const wsIsWh=c=>!!(c&&(c.channel==='mayorista'||wsOnly()));
 /* V26.33 · «Sólo mayorista» (distribuidora): toda venta es mayorista —precio por unidad y, al completar una presentación,
    el precio mayorista de esa presentación—, para cualquier cliente o consumidor final. No hay canal minorista ni «Cambiar canal». */
-function wsChan(){if(wsOnly())return'mayorista';if(pos.chanSet&&pos.chanSet.cust===pos.cust)return pos.chanSet.v;return wsIsWh(custById(pos.cust))?'mayorista':'minorista';}
+/* V27.10 · consumidor final para todos: también una distribuidora «sólo mayorista» puede venderle al público sin preguntar */
+function wsChan(){if(wsOnly())return pos.chanSet&&pos.chanSet.cust===pos.cust&&!pos.cust?pos.chanSet.v:'mayorista';if(pos.chanSet&&pos.chanSet.cust===pos.cust)return pos.chanSet.v;return wsIsWh(custById(pos.cust))?'mayorista':'minorista';}
 function wsAgreement(cid,p){const A_=(S.agreements||[]).filter(a=>a&&a.active!==false&&a.cust===cid&&wsDateOk(a.from,a.to));
  return A_.find(a=>a.pid&&a.pid===p.id)||A_.find(a=>!a.pid&&a.rubro&&a.rubro===p.rubro)||null;}
 /* desglose del stock en presentaciones: «2 Pallet + 3 Fardo + 5 u» (sólo productos por unidad con presentaciones cargadas) */
@@ -5163,6 +5209,8 @@ function wsGate(lines,cust,opts){
  const conf=wsConf();let chan=opts.ws.chan==='mayorista'?'mayorista':'minorista';
  /* V26.34 · sin cliente identificado con CUIT NO se bloquea la venta: es consumidor final y se cobra al precio por unidad
     (salvo «Sólo mayorista», donde los precios por presentación rigen para todos) */
+ /* V27.9 · «Sólo a comercios»: en el modo sólo mayorista se puede exigir un cliente mayorista con CUIT en cada venta */
+ if(conf.cli&&!(cust&&arcaCuitOk(cust.taxid||'')))return{err:'Vendemos sólo a comercios: elegí el cliente mayorista (con CUIT) antes de cobrar.'};
  if(chan==='mayorista'&&!conf.only&&!(cust&&arcaCuitOk(cust.taxid||'')))chan='minorista';
  if(chan==='mayorista'){
   if(!conf.allowClub){if(opts.coupon)return{err:'Los cupones del Club no se aplican a ventas mayoristas.'};if(opts.stampCode)return{err:'Los sellos del Club no se otorgan en ventas mayoristas.'};}}
@@ -5214,10 +5262,10 @@ function wsCustFind(q){q=String(q||'').trim().toLowerCase();if(!q)return[];const
  return S.customers.filter(c=>c.status!=='baja'&&((c.name+' '+c.last).toLowerCase().includes(q)||(qd&&c.wa.replace(/\D/g,'').includes(qd))||pad4(c.num)===q||(c.dni&&normDni(q).length>=6&&normDni(c.dni)===normDni(q))||(qd.length>=8&&(c.taxid||'').replace(/\D/g,'')===qd))).slice(0,8);}
 function wsCartBar(){if(!wsOn())return'';
  const c=custById(pos.cust),ch=wsChan();
- if(wsOnly())return`<div class="card" style="margin:.5rem 0" id="wsbar"><div class="row" style="flex-wrap:wrap"><span class="tag ok">Venta mayorista</span><b class="sp">${c?esc(custFull(c)):'Cliente sin identificar'}</b><button class="btn sm" data-act="wsPick">${c?'Cambiar cliente':'Elegir cliente'}</button>${c?'<button class="btn sm" data-act="wsPickClear">Quitar</button>':''}</div>
- <p class="sm mut" style="margin:.3rem 0 0">Precio por unidad; al completar una presentación (Display, Fardo, Pallet…) se cobra su precio mayorista.${c?' · crédito: debe '+money(debtOf(c.id))+' de '+money(c.limit||0)+(c.term>0?' · plazo '+c.term+' días':''):' Para cuenta corriente elegí el cliente.'}</p></div>`;
+ if(wsOnly()&&ch==='mayorista'){const cli=wsConf().cli,bad=cli&&!(c&&arcaCuitOk(c.taxid||''));return`<div class="card" style="margin:.5rem 0" id="wsbar"><div class="row" style="flex-wrap:wrap"><span class="tag ok">Venta mayorista${cli?' · sólo comercios':''}</span><b class="sp">${c?esc(custFull(c)):(cli?'Elegí el comercio':'Cliente sin identificar')}</b><button class="btn sm" data-act="wsPick">${c?'Cambiar cliente':'Elegir cliente'}</button>${c?'<button class="btn sm" data-act="wsPickClear">Quitar</button>':''}${!c&&!cli?'<button class="btn sm" data-act="wsChan">Vender a consumidor final</button>':''}</div>
+ <p class="sm mut" style="margin:.3rem 0 0">Precio por unidad; al completar una presentación (Display, Fardo, Pallet…) se cobra su precio mayorista.${c?' · crédito: debe '+money(debtOf(c.id))+' de '+money(c.limit||0)+(c.term>0?' · plazo '+c.term+' días':''):' Para cuenta corriente elegí el cliente.'}</p>${bad?'<div class="warnbox sm" role="status">Esta empresa vende sólo a comercios: para cobrar elegí un cliente mayorista con CUIT.</div>':''}</div>`;}
  const miss=ch==='mayorista'&&!(c&&arcaCuitOk(c.taxid||''));
- return`<div class="card" style="margin:.5rem 0" id="wsbar"><div class="row" style="flex-wrap:wrap"><span class="tag ${ch==='mayorista'?'ok':''}">Canal: ${ch==='mayorista'?'Mayorista':'Minorista'}</span><b class="sp">${c?esc(custFull(c)):'Consumidor final'}</b><button class="btn sm" data-act="wsPick">${c?'Cambiar cliente':'Elegir cliente'}</button>${c?'<button class="btn sm" data-act="wsPickClear">Quitar</button>':''}<button class="btn sm" data-act="wsChan">Cambiar canal</button></div>
+ return`<div class="card" style="margin:.5rem 0" id="wsbar"><div class="row" style="flex-wrap:wrap"><span class="tag ${ch==='mayorista'?'ok':''}">Canal: ${ch==='mayorista'?'Mayorista':'Minorista'}</span><b class="sp">${c?esc(custFull(c)):'Consumidor final'}</b><button class="btn sm" data-act="wsPick">${c?'Cambiar cliente':'Elegir cliente'}</button>${c?'<button class="btn sm" data-act="wsPickClear">Quitar</button>':''}<button class="btn sm" data-act="wsChan">${wsOnly()?'Volver a mayorista':'Cambiar canal'}</button></div>
  ${miss?'<div class="warnbox sm" role="status">Sin cliente con CUIT es una venta a <b>consumidor final</b>: se cobra al precio por unidad. Para los precios mayoristas elegí un cliente con CUIT.</div>':`<p class="sm mut" style="margin:.3rem 0 0">${ch==='mayorista'?'Precio por volumen: cada producto toma el precio de la presentación (Display, Fardo, Pallet…) que alcance su cantidad.':'Precio de venta al público.'}${c&&ch==='mayorista'?' · crédito: debe '+money(debtOf(c.id))+' de '+money(c.limit||0)+(c.term>0?' · plazo '+c.term+' días':''):''}</p>`}</div>`;}
 function wsLineInfo(l,i){if(!wsOn())return'';const p=prod(l.pid);let h='';
  if(l.why)h+=`<div class="sm ${l.rule==='MAN'?'mut':''}" style="margin-top:.3rem"><b>${esc(l.rule==='L1'||!l.rule?(wsOnly()?'Por unidad':'Minorista'):l.rule==='MAN'?'A mano':l.rule==='ACU'?'Acuerdo':'Mayorista')}</b> · ${esc(l.why)}</div>`;
@@ -5252,11 +5300,12 @@ A.wsPick=()=>{const w=modal('Elegir cliente',`<label for="wk-q">Buscar por nombr
  setTimeout(()=>{const q=$('#wk-q');if(q)q.focus();},30);};
 A.wsPickSet=el=>{pos.cust=el.dataset.id||'';pos.chanSet=null;$$('#modal-root .ov').forEach(o=>o.remove());posCart();};
 A.wsPickClear=()=>{pos.cust='';pos.chanSet=null;posCart();};
-A.wsChan=()=>{if(wsOnly())return toast('Esta distribuidora vende sólo por mayor: no hay canal minorista.',1);const c=custById(pos.cust),cur=wsChan(),to=cur==='mayorista'?'minorista':'mayorista',inh=wsIsWh(c)?'mayorista':'minorista';
- if(to===inh){pos.chanSet=null;posCart();return;}
- if(!can('price_lists'))return toast('Cambiar el canal de la operación requiere autorización (listas de precio).',1);
- modal('Cambiar canal de la operación',`<p class="sm">De <b>${cur}</b> a <b>${to}</b>. Queda en auditoría.</p><label for="wc-why">Motivo (obligatorio)</label><input id="wc-why" maxlength="80" autocomplete="off">`,
- {okText:'Cambiar',onOk:w=>{const why=val('wc-why').trim();if(why.length<5)return w._err('Escribí el motivo (mínimo 5 letras).'),false;pos.chanSet={cust:pos.cust,v:to};audit('CANAL_OPERACION',cur+' → '+to+' · '+why);posCart();}});};
+A.wsChan=()=>{/* V27.10 · sin preguntar: cambia al toque y queda en auditoría. Pasar a precio mayorista a alguien sin CUIT sigue pidiendo el permiso de listas de precio */
+ const c=custById(pos.cust),cur=wsChan(),to=cur==='mayorista'?'minorista':'mayorista';
+ if(wsOnly()){if(pos.cust&&to==='minorista')return toast('Para venderle al público, quitá el cliente: queda como consumidor final.',1);pos.chanSet=to==='minorista'?{cust:'',v:'minorista'}:null;audit('CANAL_OPERACION',cur+' → '+to+' · consumidor final');posCart();return;}
+ const inh=wsIsWh(c)?'mayorista':'minorista';if(to===inh){pos.chanSet=null;audit('CANAL_OPERACION',cur+' → '+to);posCart();return;}
+ if(to==='mayorista'&&!can('price_lists'))return toast('Pasar la venta a precio mayorista requiere el permiso de listas de precio.',1);
+ pos.chanSet={cust:pos.cust,v:to};audit('CANAL_OPERACION',cur+' → '+to+(c?' · '+custFull(c):' · consumidor final'));posCart();};
 
 /* ventas a cuenta corriente que el servidor marcó para revisar (superaron el límite mientras el equipo estaba sin conexión) */
 const wsReview=cid=>S.sales.filter(s=>s.credit_review&&(!cid||s.cust===cid));
@@ -5365,7 +5414,7 @@ function wsCfgCard(){if(!(can('config')||can('price_lists')))return'';const c=ws
  const ag=(S.agreements||[]).slice().reverse();const ov=(S.creditOv||[]).slice(-5).reverse();
  return`<div class="card" style="margin-top:1rem" id="ws-card"><h3>Mayorista: presentaciones, acuerdos y crédito ${c.example?'<span class="tag sim">datos de ejemplo</span>':''}</h3>
  <p class="sm mut">Precios por presentación (Unidad, Display, Fardo, Pallet…) según el volumen, acuerdos por cliente y crédito con plazo. Apagado, el sistema vende exactamente como siempre.</p>
- <p class="sm">Canal: <b>${c.only?'Sólo mayorista (distribuidora)':'Minorista y mayorista'}</b> · se cambia en <a href="#" data-act="bmGo">Modelo de negocio</a>.</p>
+ <p class="sm">Canal: <b>${c.only?'Sólo mayorista (distribuidora)':'Minorista y mayorista'}</b> · se cambia en <a href="#" data-act="bmGo">Modelo de negocio</a>.</p>${c.only?`<label class="chk"><input type="checkbox" id="ws-cli" ${c.cli?'checked':''} ${adm}> Vender sólo a comercios: cada venta necesita un cliente mayorista con CUIT</label>`:''}
  ${c.on?`<h4 style="margin:.8rem 0 .2rem">Presentaciones de venta</h4>
  <p class="sm mut">Son los «tipos de precio» que se cargan en cada producto según el volumen: <b>Unidad</b> (siempre; es el precio de venta) y las que definas acá. Podés renombrarlas y agregar las que necesites (Media caja, Bolsón…). En cada producto se carga cuántas unidades trae cada una y su precio.</p>
  <div id="ws-lv">${c.levels.map(l=>`<div class="row" style="margin-bottom:.3rem"><input id="ws-ln-${esc(l.id)}" maxlength="24" value="${esc(l.name)}" aria-label="Nombre de la presentación" style="max-width:240px" ${adm}>${adm===''?`<button class="btn sm red" type="button" data-act="wsLvDel" data-id="${esc(l.id)}" aria-label="Quitar ${esc(l.name)}">Quitar</button>`:''}<span class="sm mut">${(S.products||[]).filter(p=>(p.pres||[]).some(k=>k.lv===l.id)).length} producto(s) la usan</span></div>`).join('')||'<p class="sm mut">Sin presentaciones: sólo se vende por Unidad.</p>'}</div>
@@ -5393,7 +5442,7 @@ A.wsLvDel=el=>{if(!can('config'))return toast('Sólo el administrador',1);const 
  confirmBox('Quitar presentación','Se quita «'+l.name+'» de la lista. Ningún producto la usa.',()=>{wsLvSave(L.levels.filter(x=>x.id!==l.id),'quitada «'+l.name+'»');},'Quitar');};
 A.wsSave=()=>{if(!can('config'))return toast('Sólo el administrador',1);const cur=wsConf();const on=$('#ws-on')?$('#ws-on').checked:cur.on;
  const W=Object.assign({},S.cfg.wholesale||{},{on,allowClub:cur.allowClub,grace:cur.grace,example:cur.example,levels:cur.levels.map(l=>({...l}))});delete W.lists;
- if(on&&cur.on){W.only=$('#ws-only')?$('#ws-only').checked:!!cur.only;W.allowClub=!!($('#ws-club')&&$('#ws-club').checked);const g=val('ws-gr').trim()===''?0:Math.round(parseNum(val('ws-gr')));if(isNaN(g)||g<0||g>60)return toast('La tolerancia de mora va de 0 a 60 días.',1);W.grace=g;
+ if(on&&cur.on){W.only=$('#ws-only')?$('#ws-only').checked:!!cur.only;W.cli=!!(W.only&&($('#ws-cli')?$('#ws-cli').checked:cur.cli));W.allowClub=!!($('#ws-club')&&$('#ws-club').checked);const g=val('ws-gr').trim()===''?0:Math.round(parseNum(val('ws-gr')));if(isNaN(g)||g<0||g>60)return toast('La tolerancia de mora va de 0 a 60 días.',1);W.grace=g;
   const L=wsLvRead();if(L.err)return toast(L.err,1);W.levels=L.levels;}
  const apply=()=>{const before=JSON.stringify(S.cfg.wholesale||{});S.cfg.wholesale=W;audit(on!==cur.on?(on?'MAYORISTA_ACTIVAR':'MAYORISTA_APAGAR'):'MAYORISTA_CONFIG','antes '+before.slice(0,160)+' · ahora '+JSON.stringify(W).slice(0,160));save();rerender();toast('Guardado');};
  if(on!==cur.on)confirmBox(on?'Activar canal mayorista':'Apagar canal mayorista',on?'Aparecen los precios por presentación (Unidad, Display, Fardo, Pallet…), los acuerdos por cliente y el crédito con plazo. Las ventas anteriores no cambian.':'Se vende como minorista otra vez. Las presentaciones, acuerdos y precios quedan guardados y las ventas anteriores no cambian.',apply,on?'Activar':'Apagar');else apply();};
